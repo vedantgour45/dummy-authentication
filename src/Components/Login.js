@@ -1,4 +1,3 @@
-// Login.js
 import React, { useState } from "react";
 import "./Style.css";
 import axios from "axios";
@@ -28,7 +27,7 @@ const Login = ({ onLogin }) => {
         onLogin();
       }
     } catch (error) {
-      console.log(error.response.data); // Display error from the API
+      console.log(error.response.data);
       if (
         error.response &&
         error.response.data &&
