@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from "react";
+import Login from "./Components/Login";
+import Profile from "./Components/Profile";
 
-function App() {
+const App = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [userId, setUserId] = useState(null);
+
+  const handleLogin = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      setLoggedIn(true);
+      setUserId(user.id);
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setLoggedIn(false);
+    setUserId(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {loggedIn ? (
+        <>
+          <Profile userId={userId} />
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
+        </>
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
     </div>
   );
-}
+};
 
 export default App;

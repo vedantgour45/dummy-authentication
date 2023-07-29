@@ -1,0 +1,121 @@
+body {
+    padding: 2rem;
+    background: linear-gradient(to top right, #fff 50%, #F8FAFC 50%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%;
+    background-color: #fff;
+    gap: 1rem;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.login p {
+    font-size: 20px;
+    color: #757575;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.login h2 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login form label {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.login form input {
+    padding: 10px;
+    width: 90%;
+    font-size: 15px;
+}
+
+.login form button,
+.logout-btn {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #625BF7 0%, #463EEA 100%);
+}
+
+.login form button:hover,
+.logout-btn:hover {
+    background: linear-gradient(180deg, #3127f6 0%, #756fe3 100%);
+}
+
+.forgot {
+    text-align: center;
+}
+
+.forgot a {
+    font-size: 1rem;
+}
+
+a {
+    color: #625BF7;
+    text-decoration: none;
+}
+
+.profile h2 {
+    background: linear-gradient(180deg, #625BF7 0%, #463EEA 100%);
+    border-radius: 10px;
+    letter-spacing: 0.2rem;
+    text-decoration: underline;
+    color: #fff;
+    margin: 0;
+    padding: 2rem 1rem;
+}
+
+.profile p {
+    color: #333;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+}
