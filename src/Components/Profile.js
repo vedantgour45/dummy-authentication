@@ -27,22 +27,32 @@ const Profile = ({ userId }) => {
   return (
     <div className="profile">
       <h2>Profile Page</h2>
-      <p>
-        <b>Username 👤:</b> {user.username}
-      </p>
-      <p>
-        <b>Name {user.gender === "male" ? "🙋‍♂️" : "🙋‍♀️"}:</b> {user.firstName}{" "}
-        {user.lastName}
-      </p>
-      <p>
-        <b>Gender {user.gender === "male" ? "🚹" : "🚺"}:</b> {user.gender}
-      </p>
-      <p>
-        <b>Age ♾️:</b> {user.age}
-      </p>
-      <p>
-        <b>Address 📌:</b> {user.address.address}, {user.address.city}
-      </p>
+      <div className="content">
+        <div className="left">
+          <p>
+            <b>Username 👤:</b> {user.username}
+          </p>
+          <p>
+            <b>Name {user.gender === "male" ? "🙋‍♂️" : "🙋‍♀️"}:</b> {user.firstName}{" "}
+            {user.lastName}
+          </p>
+          <p>
+            <b>Email 📧:</b> {user.email}
+          </p>
+          <p>
+            <b>Gender {user.gender === "male" ? "🚹" : "🚺"}:</b> {user.gender}
+          </p>
+          <p>
+            <b>Age ♾️:</b> {user.age}
+          </p>
+          <p>
+            <b>Address 📌:</b> {user.address.address}, {user.address.city}
+          </p>
+        </div>
+        <div className="right">
+            <img src={user.image} alt={user.firstName} />
+        </div>
+      </div>
     </div>
   );
 };

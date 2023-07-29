@@ -22,7 +22,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       {loggedIn ? (
         <>
           <Profile userId={userId} />
